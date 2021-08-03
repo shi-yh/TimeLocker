@@ -1,0 +1,341 @@
+Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.4f1c1 (3d27070cb163) revision 4007687'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1083; Version 2009; 64bit' Language: 'zh' Physical Memory: 32727 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.4f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+G:/TimeLocker/TimeLocker
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64821
+Successfully changed project path to: G:/TimeLocker/TimeLocker
+G:/TimeLocker/TimeLocker
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 27.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1c1 (3d27070cb163)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/TimeLocker/TimeLocker/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.6259
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005673 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 98.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.738 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000675 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.253 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1263 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.7 MB.
+System memory in use after: 62.8 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1708.
+Total: 2.313900 ms (FindLiveObjects: 0.177400 ms CreateObjectMapping: 0.040800 ms MarkObjects: 2.037600 ms  DeleteObjects: 0.056900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Model/Materials
+  artifactKey: Guid(939758d793921b54cabb544ca6b77e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Model/Materials using Guid(939758d793921b54cabb544ca6b77e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce608b87c927e5bd109275e0184952f6') in 0.004686 seconds
+  Import took 0.006512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.548300 seconds.
+  path: Assets/尼尔2B/尼尔武器两把.fbm
+  artifactKey: Guid(7ce6aad1fc1aa1745a4ad63693343369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/尼尔2B/尼尔武器两把.fbm using Guid(7ce6aad1fc1aa1745a4ad63693343369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469ae2a1d1818aee3eff5d181ae038f5') in 0.002392 seconds
+  Import took 0.004745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.941086 seconds.
+  path: Assets/尼尔2B/尼尔武器两把.fbx
+  artifactKey: Guid(4d5fe9e0a8b36f840b6e3b0021bed458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/尼尔2B/尼尔武器两把.fbx using Guid(4d5fe9e0a8b36f840b6e3b0021bed458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0403c02900f10892c9b1e5d650fc7fcc') in 0.719911 seconds
+  Import took 0.722411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.905096 seconds.
+  path: Assets/尼尔2B/机械纪元2b_skin2012.max
+  artifactKey: Guid(d9681ca360d505644af3a9869bbd4e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/尼尔2B/机械纪元2b_skin2012.max using Guid(d9681ca360d505644af3a9869bbd4e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aacfd9977da91d8105e14764cd126e9b') in 0.005148 seconds
+  Import took 0.007225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.428609 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi
+  artifactKey: Guid(14536b45728016048a67444862d5a405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi using Guid(14536b45728016048a67444862d5a405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f49567ff4ddf50af1f4a5d45e06cac78') in 0.002466 seconds
+  Import took 0.004576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.445106 seconds.
+  path: Assets/尼尔2B
+  artifactKey: Guid(9f1ac91059f451446b1930dbea9bef6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/尼尔2B using Guid(9f1ac91059f451446b1930dbea9bef6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7fc1fbc7a2ebf0f774688a43c0abad5') in 0.002673 seconds
+  Import took 0.004698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.018225 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Prefab/Accessory_00.prefab
+  artifactKey: Guid(cf67d967579eaf54390f8e3e730bfb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Prefab/Accessory_00.prefab using Guid(cf67d967579eaf54390f8e3e730bfb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab07463aa286f8287355355af453fbf9') in 0.072654 seconds
+  Import took 0.075352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.855795 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Prefab/Set_Misaki_Costume_00.prefab
+  artifactKey: Guid(bcc4c92be3ca7224cb2c08bfcdd14db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Prefab/Set_Misaki_Costume_00.prefab using Guid(bcc4c92be3ca7224cb2c08bfcdd14db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd25053d2478d6450be4e7d88c82248e6') in 0.025002 seconds
+  Import took 0.027608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.349882 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX
+  artifactKey: Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX using Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efa931c7f656636b0513b443af3649d') in 0.056710 seconds
+  Import took 0.059079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019761 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX
+  artifactKey: Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX using Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efa931c7f656636b0513b443af3649d') in 0.056787 seconds
+  Import took 0.060099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.810662 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/SD_unitychan_motion_humanoid.fbx
+  artifactKey: Guid(59c9c28dc12daa347afaea6c5b6c14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/SD_unitychan_motion_humanoid.fbx using Guid(59c9c28dc12daa347afaea6c5b6c14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd1bb138f5f95d7ceadd2cf75c56dd0') in 0.015685 seconds
+  Import took 0.020195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005919 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/SD_unitychan_motion_humanoid.fbx
+  artifactKey: Guid(59c9c28dc12daa347afaea6c5b6c14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/SD_unitychan_motion_humanoid.fbx using Guid(59c9c28dc12daa347afaea6c5b6c14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd1bb138f5f95d7ceadd2cf75c56dd0') in 0.014644 seconds
+  Import took 0.020732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.458064 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Optimize_SDKohaku-Chanz_addbone_mask.mask
+  artifactKey: Guid(e8fd8a04098fb8b4ea96d10ee2430a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Optimize_SDKohaku-Chanz_addbone_mask.mask using Guid(e8fd8a04098fb8b4ea96d10ee2430a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328011905660208f1e1f0b0dca011078') in 0.006155 seconds
+  Import took 0.008331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.395840 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Optimize_SDKohaku-Chanz.ht
+  artifactKey: Guid(7a8432b719115ed488dc7132db0d8a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Optimize_SDKohaku-Chanz.ht using Guid(7a8432b719115ed488dc7132db0d8a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bf2376cc354010f7c3ed66d433a52c') in 0.006027 seconds
+  Import took 0.008210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.534392 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Materials
+  artifactKey: Guid(ed7db234927cdcf409c41d13a42b3695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/Materials using Guid(ed7db234927cdcf409c41d13a42b3695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03e054179d3d34a19f7b7f9d631ae8fe') in 0.002559 seconds
+  Import took 0.005259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 617.560137 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX
+  artifactKey: Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX using Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a68f356db6d618cfdb4392c8dfb655') in 0.054921 seconds
+  Import took 0.058149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.882071 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation
+  artifactKey: Guid(546db876944fd6e43978ca2bc9ccaead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation using Guid(546db876944fd6e43978ca2bc9ccaead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ba115979674bde315768982d69ca56') in 0.002423 seconds
+  Import took 0.004733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.887917 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX
+  artifactKey: Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX using Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c49ffe18969a4b6af57b7fb403d555c') in 0.061133 seconds
+  Import took 0.064619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.173986 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX
+  artifactKey: Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Animation/_ForRiggingMotion.FBX using Guid(3b600387331ea7347afc2c21d84fd147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04e722068df23b9fbfd2ad3e8671dbb') in 0.055275 seconds
+  Import took 0.059535 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000723 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1254 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.6 MB.
+System memory in use after: 79.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1755.
+Total: 2.133400 ms (FindLiveObjects: 0.352000 ms CreateObjectMapping: 0.049400 ms MarkObjects: 1.708600 ms  DeleteObjects: 0.020700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1293.715924 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(79f42a374e5888a4a8f3ac8eaff92b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(79f42a374e5888a4a8f3ac8eaff92b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99cceff687c55b541faa28623d7126aa') in 0.019305 seconds
+  Import took 0.021704 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000663 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1254 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.7 MB.
+System memory in use after: 79.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1758.
+Total: 1.825200 ms (FindLiveObjects: 0.212600 ms CreateObjectMapping: 0.065700 ms MarkObjects: 1.525600 ms  DeleteObjects: 0.016800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 803.742000 seconds.
+  path: Assets/AnimatorController
+  artifactKey: Guid(8c3581d0594094b4fa7b912b4024e7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AnimatorController using Guid(8c3581d0594094b4fa7b912b4024e7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cec348b833a46f4373c3a1f38a5f4997') in 0.004579 seconds
+  Import took 0.006924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.316267 seconds.
+  path: Assets/AnimatorController/Role.controller
+  artifactKey: Guid(260a387fb3f87304ba73401b43429a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AnimatorController/Role.controller using Guid(260a387fb3f87304ba73401b43429a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35979edac478bffafa989130f6e65630') in 0.014101 seconds
+  Import took 0.016074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001194 seconds.
+  path: Assets/AnimatorController/Role.controller
+  artifactKey: Guid(260a387fb3f87304ba73401b43429a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AnimatorController/Role.controller using Guid(260a387fb3f87304ba73401b43429a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35979edac478bffafa989130f6e65630') in 0.003093 seconds
+  Import took 0.005465 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001017 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.142 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1254 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.7 MB.
+System memory in use after: 79.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1761.
+Total: 2.279000 ms (FindLiveObjects: 0.300600 ms CreateObjectMapping: 0.180200 ms MarkObjects: 1.779200 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 624.321535 seconds.
+  path: Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Model/Model-Set
+  artifactKey: Guid(99abafef208d3f44ab443786988ff261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SD Kohaku-Chanz OPV Costume SchoolMizugi/Model/Model-Set using Guid(99abafef208d3f44ab443786988ff261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb2b704b43fe2d9f07d7a6fd31d8362') in 0.005375 seconds
+  Import took 0.008012 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000943 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1254 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.7 MB.
+System memory in use after: 79.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1764.
+Total: 2.042800 ms (FindLiveObjects: 0.198100 ms CreateObjectMapping: 0.103000 ms MarkObjects: 1.722100 ms  DeleteObjects: 0.017500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
