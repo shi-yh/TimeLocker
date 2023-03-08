@@ -108,18 +108,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Update()
     {
-        if (_state== GameState.GameState_Run)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Time.timeScale = 1;
-            }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                Time.timeScale = 0;
-            }
-        }
+        
 
        
 
