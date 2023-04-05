@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class Role : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float _speed;
 
-    [SerializeField]
-    private GameObject _model;
+    [SerializeField] private GameObject _model;
 
-    [SerializeField]
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
+
 
     /// <summary>
     ///  «∑ÒÀ¿Õˆ
@@ -23,12 +24,32 @@ public class Role : MonoBehaviour
     /// </summary>
     private bool _canControl;
 
+    private MyActions _myActions;
+
+    private Rigidbody _rigidbody;
+
+
+    private void Awake()
+    {
+        _myActions = new MyActions();
+        _myActions.Enable();
+
+        _rigidbody = GetComponent<Rigidbody>();
+
+        _myActions.PlayerMove.Move.performed += OnMovePerformed;
+    }
 
     public event Action<bool> onDeath;
 
+
+    private void OnMovePerformed(InputAction.CallbackContext context)
+    {
+        _rigidbody.velocity = _speed * context.ReadValue<Vector3>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Enemy")
+        if (other.CompareTag("Enemy"))
         {
             SetDeath(true);
         }
@@ -36,7 +57,7 @@ public class Role : MonoBehaviour
 
     public void SetCanControl(bool canControl)
     {
-        if (_canControl==canControl)
+        if (_canControl.Equals(canControl))
         {
             return;
         }
@@ -47,7 +68,7 @@ public class Role : MonoBehaviour
 
     private void SetDeath(bool death)
     {
-        if (_death==death)
+        if (_death == death)
         {
             return;
         }
@@ -67,17 +88,11 @@ public class Role : MonoBehaviour
         SetDeath(false);
     }
 
-    
 
     private void FixedUpdate()
     {
-        Vector3 mousePos = GetMovePos();
-
-        if (!_death&&_canControl)
+        if (!_death && _canControl)
         {
-            CheckFaceTo(mousePos);
-
-            transform.Translate(mousePos * Time.deltaTime * speed, Space.Self);
         }
     }
 
@@ -105,6 +120,4 @@ public class Role : MonoBehaviour
         Vector3 faceRotate = new Vector3(0, 0 + mousePos.x * 60, 0);
         transform.localRotation = Quaternion.Euler(faceRotate);
     }
-
-
 }

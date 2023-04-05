@@ -86,10 +86,7 @@ public class GameManager : MonoSingleton<GameManager>
 
                     cameras[1].enabled = false;
                     cameras[0].enabled = true;
-
-                    Time.timeScale = 0;
-
-
+                    
                     yield return new WaitForSecondsRealtime(2.15f);
 
                     role.SetCanControl(true);
