@@ -9,10 +9,13 @@ public class Role : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
+    [SerializeField] private float _acceleration;
+
+    [SerializeField] private float _deceleration;
+
     [SerializeField] private GameObject _model;
 
     [SerializeField] private Animator _animator;
-
 
     /// <summary>
     ///  «∑ÒÀ¿Õˆ
@@ -28,6 +31,8 @@ public class Role : MonoBehaviour
 
     private Rigidbody _rigidbody;
 
+    private Coroutine _moveCoroutine;
+
 
     private void Awake()
     {
@@ -36,16 +41,48 @@ public class Role : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody>();
 
-        _myActions.PlayerMove.Move.performed += OnMovePerformed;
+        _myActions.PlayerMove.Move.performed += Move;
+        _myActions.PlayerMove.Move.canceled += Stop;
     }
+
 
     public event Action<bool> onDeath;
 
 
-    private void OnMovePerformed(InputAction.CallbackContext context)
+    private void Stop(InputAction.CallbackContext context)
     {
-        _rigidbody.velocity = _speed * context.ReadValue<Vector3>();
+        if (_moveCoroutine != null)
+        {
+            StopCoroutine(_moveCoroutine);
+        }
+
+        _moveCoroutine = StartCoroutine(MoveCoroutine(_deceleration, Vector3.zero));
     }
+
+
+    private void Move(InputAction.CallbackContext context)
+    {
+        if (_moveCoroutine != null)
+        {
+            StopCoroutine(_moveCoroutine);
+        }
+
+        _moveCoroutine = StartCoroutine(MoveCoroutine(_acceleration, _speed * context.ReadValue<Vector3>().normalized));
+    }
+
+    IEnumerator MoveCoroutine(float time, Vector3 moveVelocity)
+    {
+        float t = 0f;
+        while (t < time)
+        {
+            t += Time.fixedDeltaTime;
+
+            _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, moveVelocity, t / time);
+
+            yield return null;
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -86,38 +123,5 @@ public class Role : MonoBehaviour
         transform.position = pos;
 
         SetDeath(false);
-    }
-
-
-    private void FixedUpdate()
-    {
-        if (!_death && _canControl)
-        {
-        }
-    }
-
-    private Vector3 GetMovePos()
-    {
-        Vector3 mousePos = Input.mousePosition;
-
-        mousePos.x -= Screen.width / 2;
-
-        mousePos.y -= Screen.height / 2;
-
-        mousePos.x /= Screen.width;
-
-        mousePos.y /= Screen.height;
-
-        mousePos.z = mousePos.y;
-
-        mousePos.y = 0;
-
-        return mousePos;
-    }
-
-    private void CheckFaceTo(Vector3 mousePos)
-    {
-        Vector3 faceRotate = new Vector3(0, 0 + mousePos.x * 60, 0);
-        transform.localRotation = Quaternion.Euler(faceRotate);
     }
 }
