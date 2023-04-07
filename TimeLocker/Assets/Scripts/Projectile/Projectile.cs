@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -9,10 +7,13 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private Vector3 _moveDir;
 
+    public float startTime { get; private set; }
+    
 
     private void OnEnable()
     {
         StartCoroutine(MoveDirectly());
+        startTime = Time.time;
     }
 
     IEnumerator MoveDirectly()

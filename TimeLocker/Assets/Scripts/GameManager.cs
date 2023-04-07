@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using JFramework.Core;
+
 public enum GameState
 {
     GameState_UI,
@@ -22,38 +22,34 @@ public class GameManager : MonoSingleton<GameManager>
     private GameState _state;
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         role.onDeath += Role_onDeath;
 
         RestartGame();
-
     }
 
     private void Role_onDeath(bool obj)
     {
         if (obj)
         {
-            StartCoroutine(SetGameState(GameState.GameState_UI));
+            SetGameState(GameState.GameState_UI);
         }
-
     }
 
 
     public void RestartGame()
     {
-        StartCoroutine(SetGameState(GameState.GameState_Run));
+        SetGameState(GameState.GameState_Run);
     }
 
 
-    public IEnumerator SetGameState(GameState state)
+    private void SetGameState(GameState state)
     {
-        if (_state==state)
+        if (_state == state)
         {
-            yield break ;
+            return;
         }
 
         _state = state;
@@ -61,57 +57,37 @@ public class GameManager : MonoSingleton<GameManager>
         switch (_state)
         {
             case GameState.GameState_UI:
-                {
-                    Time.timeScale = 1;
+            {
+                Time.timeScale = 1;
 
-                    role.SetCanControl(false);
-
-
-                    cameras[0].enabled = false;
-                    cameras[1].enabled = true;
-
-                    yield return new WaitForSecondsRealtime(2.15f);
-
-                    ui.ShowEndView();
+                role.SetCanControl(false);
 
 
-                }
+                cameras[0].enabled = false;
+                cameras[1].enabled = true;
+
+                ui.ShowEndView();
+            }
                 break;
             case GameState.GameState_Run:
-                {
+            {
+                ui.HideEndView();
 
-                    ui.HideEndView();
+                role.Revive(startPos);
 
-                    role.Revive(startPos);
+                cameras[1].enabled = false;
+                cameras[0].enabled = true;
 
-                    cameras[1].enabled = false;
-                    cameras[0].enabled = true;
-                    
-                    yield return new WaitForSecondsRealtime(2.15f);
-
-                    role.SetCanControl(true);
-
-
-                }
-                break;
-            default:
+                role.SetCanControl(true);
+            }
                 break;
         }
 
-
-
+        EventManager.Invoke(MsgID.OnGameStateChange, _state);
     }
-
 
     private void Update()
     {
-        
-
-       
-
-
-        
+        // MsgManager.Instance.OnUpdate();
     }
-
-
 }

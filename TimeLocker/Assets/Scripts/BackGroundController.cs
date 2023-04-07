@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BackGroundController : MonoBehaviour
@@ -28,7 +25,7 @@ public class BackGroundController : MonoBehaviour
             _time = 0;
         }
 
-        _block.SetVector("_MainTex_ST", new Vector4(5, 5, 0, _time));
+        _block.SetVector("_BaseMap_ST", new Vector4(5, 5, 0, _time));
         _render.SetPropertyBlock(_block);
     }
 }

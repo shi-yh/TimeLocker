@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.jinyijie.core": "https://github.com/1176892094/JFramework.git",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.characters-animation": "1.0.0",
