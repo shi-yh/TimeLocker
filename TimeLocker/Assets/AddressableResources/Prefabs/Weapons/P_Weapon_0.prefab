@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9136e38951afa8843b7cb4a3dc338aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileUrl: Prefabs/Bullets/P_Bullet_0
+  _projectileUrl: Prefabs/P_Bullet_0
   _shootDuration: 0.3
   _projectileLifeTime: 1.5

@@ -10,23 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: AddressableResources-Prefabs
+  m_Name: Prefabs
   m_EditorClassIdentifier: 
-  m_GroupName: AddressableResources-Prefabs
+  m_GroupName: Prefabs
   m_Data:
     m_SerializedData: []
-  m_GUID: c947e8ebe29b5a9478c7f2669bca973a
+  m_GUID: d8f9f6372551ffa4288bccddd01c92c6
   m_SerializeEntries:
-  - m_GUID: 8079f11c5a222054a81011d441b440d7
-    m_Address: Prefabs/Bullets
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: a36341fb07dc1e844a5e74f94e4dda4d
     m_Address: Prefabs/P_Bullet_0
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b129fc0f914c23948a306809f2376e90
-    m_Address: Prefabs/Weapons
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dbc2ecf8643312341bf571e475b3551f
@@ -37,5 +29,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 9f6243da43e4bac4cbe5152b32c28694, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d44a1ec842759b341b384609b99f4a7f, type: 2}
-    - {fileID: 11400000, guid: 3fd98cb5e1a65ba44a0081cb26747a50, type: 2}
+    - {fileID: 11400000, guid: 94b75b2223d7b924294391799efe63b2, type: 2}
+    - {fileID: 11400000, guid: ae7e90e228b3f01459a096d4e148eb6f, type: 2}

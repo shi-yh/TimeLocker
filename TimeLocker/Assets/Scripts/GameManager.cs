@@ -1,5 +1,6 @@
 using UnityEngine;
 using Cinemachine;
+using JFramework;
 using JFramework.Core;
 
 public enum GameState
@@ -9,7 +10,7 @@ public enum GameState
     GameState_Run
 }
 
-public class GameManager : MonoSingleton<GameManager>
+public class GameManager : Entity
 {
     public Role role;
 
@@ -22,23 +23,19 @@ public class GameManager : MonoSingleton<GameManager>
     private GameState _state;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        role.onDeath += Role_onDeath;
+    public InputController inputCtrl => Get<InputController>();
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        
+        Debug.Log(inputCtrl);
+        
         RestartGame();
+
     }
 
-    private void Role_onDeath(bool obj)
-    {
-        if (obj)
-        {
-            SetGameState(GameState.GameState_UI);
-        }
-    }
-
-
+    
     public void RestartGame()
     {
         SetGameState(GameState.GameState_Run);
@@ -60,9 +57,6 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 Time.timeScale = 1;
 
-                role.SetCanControl(false);
-
-
                 cameras[0].enabled = false;
                 cameras[1].enabled = true;
 
@@ -73,21 +67,12 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 ui.HideEndView();
 
-                role.Revive(startPos);
-
                 cameras[1].enabled = false;
                 cameras[0].enabled = true;
-
-                role.SetCanControl(true);
             }
                 break;
         }
 
         EventManager.Invoke(MsgID.OnGameStateChange, _state);
-    }
-
-    private void Update()
-    {
-        // MsgManager.Instance.OnUpdate();
     }
 }
