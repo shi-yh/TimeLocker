@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GameManager;
 using JFramework.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -61,7 +62,7 @@ public class Weapon : MonoBehaviour
 
                 if (time - projectile.startTime >= _projectileLifeTime)
                 {
-                    // PoolManager.Instance.Recycle(projectile.gameObject);
+                    PoolManager.Push(projectile.gameObject);
                     _projectiles.Dequeue();
                 }
                 else

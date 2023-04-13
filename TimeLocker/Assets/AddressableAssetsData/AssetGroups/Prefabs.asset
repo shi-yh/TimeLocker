@@ -25,6 +25,14 @@ MonoBehaviour:
     m_Address: Prefabs/P_Weapon_0
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 729746a7eeb1b0349b75b24263276fa4
+    m_Address: Prefabs/Camera
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aab8634a23125e446a0249cc9f8e39dc
+    m_Address: Prefabs/Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9f6243da43e4bac4cbe5152b32c28694, type: 2}
   m_SchemaSet:

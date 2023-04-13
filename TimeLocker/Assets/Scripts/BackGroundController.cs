@@ -1,3 +1,4 @@
+using JFramework.Core;
 using UnityEngine;
 
 public class BackGroundController : MonoBehaviour
@@ -16,9 +17,17 @@ public class BackGroundController : MonoBehaviour
         _block = new MaterialPropertyBlock();
     }
 
+    private bool temp = true;
+
     private void Update()
     {
         _time -= Time.deltaTime * _speed;
+
+        if (temp && _time < -2)
+        {
+            SpawnEnemy();
+            temp = false;
+        }
 
         if (_time <= -10)
         {
@@ -27,5 +36,10 @@ public class BackGroundController : MonoBehaviour
 
         _block.SetVector("_BaseMap_ST", new Vector4(5, 5, 0, _time));
         _render.SetPropertyBlock(_block);
+    }
+
+    private void SpawnEnemy()
+    {
+        PoolManager.Pop("Prefabs/Enemy", null);
     }
 }
