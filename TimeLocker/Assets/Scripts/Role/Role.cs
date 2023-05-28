@@ -3,7 +3,7 @@ using JFramework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Role : Entity
+public class Role : EntitySpecial
 {
     [SerializeField] private GameObject _model;
 

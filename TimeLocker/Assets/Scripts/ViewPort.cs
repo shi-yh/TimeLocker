@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JFramework;
 using UnityEngine;
 
-public class ViewPort : Singleton<ViewPort>
+public class ViewPort : BaseSingleton<ViewPort>
 {
     private const int DefaultSize = 10;
     private Bounds _moveBound;

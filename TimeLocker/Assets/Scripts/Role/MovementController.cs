@@ -10,7 +10,7 @@ public class MovementController : Controller<Role>
 
     private Coroutine _moveCoroutine;
 
-    protected override void Start()
+    protected override void Spawn()
     {
         _ownerRig = owner.GetComponent<Rigidbody>();
     }

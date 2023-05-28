@@ -7,14 +7,21 @@ public class EnemyEntity : Role
 {
     private Vector3 _targetPos;
 
+    private Player _targetPlayer;
+
+
     protected override void OnEnable()
     {
         base.OnEnable();
 
+        _targetPlayer = GameObject.FindWithTag("Player").GetComponent<Player>();
+
+
         transform.position = ViewPort.Instance.GetRandomPosOutOfBound();
 
-        _targetPos = ViewPort.Instance.GetRandomPosInBound();
-        MoveCtrl.Move((_targetPos-transform.position).normalized,false);
+        _targetPos = _targetPlayer.transform.position;
+
+        MoveCtrl.Move((_targetPos - transform.position).normalized, false);
     }
 
     protected override void OnUpdate()
@@ -23,8 +30,18 @@ public class EnemyEntity : Role
 
         if (offset.sqrMagnitude < 1)
         {
-            _targetPos = ViewPort.Instance.GetRandomPosInBound();
-            MoveCtrl.Move((_targetPos-transform.position).normalized,false);
+            Vector3 pos = transform.position;
+
+
+            if (ViewPort.Instance.GetPlayerMoveAblePosition(ref pos))
+            {
+                _targetPos = ViewPort.Instance.GetRandomPosOutOfBound();
+                MoveCtrl.Move((_targetPos - transform.position).normalized, false);
+            }
+            else
+            {
+                
+            }
         }
     }
 }

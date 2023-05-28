@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928570274654705918, guid: dbc2ecf8643312341bf571e475b3551f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.26
+      value: 0.744
       objectReference: {fileID: 0}
     - target: {fileID: 8928570274654705918, guid: dbc2ecf8643312341bf571e475b3551f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 1402195064}
   m_Layer: 0
   m_Name: Role
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

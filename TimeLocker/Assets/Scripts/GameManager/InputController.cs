@@ -9,7 +9,7 @@ namespace GameManager
         private MyActions _myActions;
 
 
-        protected override void Start()
+        protected override void Spawn()
         {
             _myActions = new MyActions();
             _myActions.Enable();

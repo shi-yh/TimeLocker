@@ -2,15 +2,12 @@ using JFramework;
 
 namespace GameManager
 {
-    public class GameManagerMachine : Machine<GameManager>
+    public class GameManagerMachine : StateMachine<GameManager>
     {
-        protected override void Start()
+        protected override void Spawn()
         {
-            base.Start();
-
             AddState<GameStateRun>();
             AddState<GameStateEnd>();
         }
-    
     }
 }

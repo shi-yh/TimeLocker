@@ -1,29 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using GameManager;
+using JFramework;
 using JFramework.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Weapon : MonoBehaviour
+public class Weapon : Entity
 {
     [SerializeField] private string _projectileUrl;
 
     [SerializeField] private float _shootDuration = 0.1f;
-
-    [SerializeField] private float _projectileLifeTime = 4f;
-
+    
     private Queue<Projectile> _projectiles = new Queue<Projectile>();
 
     protected Coroutine curShootCoroutine;
+    
 
-    protected Coroutine curProjectileRecycleCoroutine;
-
-    private void Awake()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         EventManager.Listen(MsgID.OnGameStateChange, OnGameStateChange);
-        // MsgManager.Instance.Register(MsgID.OnGameStateChange, OnGameStateChange);
     }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        EventManager.Remove(MsgID.OnGameStateChange, OnGameStateChange);
+    }
+
 
     private void OnGameStateChange(object[] obj)
     {
@@ -32,7 +37,6 @@ public class Weapon : MonoBehaviour
         if (state == GameState.GameState_Run)
         {
             curShootCoroutine = StartCoroutine(StartShoot());
-            curProjectileRecycleCoroutine = StartCoroutine(RecycleProjectile());
         }
         else
         {
@@ -40,39 +44,9 @@ public class Weapon : MonoBehaviour
             {
                 StopCoroutine(curShootCoroutine);
             }
-
-            if (curProjectileRecycleCoroutine != null)
-            {
-                StopCoroutine(curProjectileRecycleCoroutine);
-            }
         }
     }
-
-    private IEnumerator RecycleProjectile()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(_shootDuration);
-
-            while (_projectiles.Count > 0)
-            {
-                float time = Time.time;
-
-                Projectile projectile = _projectiles.Peek();
-
-                if (time - projectile.startTime >= _projectileLifeTime)
-                {
-                    PoolManager.Push(projectile.gameObject);
-                    _projectiles.Dequeue();
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
-    }
-
+    
     protected IEnumerator StartShoot()
     {
         while (true)
@@ -86,10 +60,8 @@ public class Weapon : MonoBehaviour
             }));
         }
     }
-
-
+    
     private void OnDestroy()
     {
-        EventManager.Remove(MsgID.OnGameStateChange, OnGameStateChange);
     }
 }

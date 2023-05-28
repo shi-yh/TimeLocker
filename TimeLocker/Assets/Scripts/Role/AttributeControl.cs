@@ -13,7 +13,7 @@ public class AttributeControl : Controller<Role>
     public float Deceleration { get; private set; }
 
 
-    protected override void Start()
+    protected override void Spawn()
     {
         Hp = 100;
 

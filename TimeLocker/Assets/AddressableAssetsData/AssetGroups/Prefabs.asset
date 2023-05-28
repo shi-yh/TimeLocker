@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: Prefabs/Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 140ce200f4eff1f429ed8384a5bc1482
+    m_Address: Prefabs/P_Bullet_0_Effect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9f6243da43e4bac4cbe5152b32c28694, type: 2}
   m_SchemaSet:

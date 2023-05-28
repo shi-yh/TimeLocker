@@ -12,7 +12,7 @@ namespace GameManager
         private CinemachineVirtualCamera _endCamera;
 
 
-        protected override void Start()
+        protected override void Spawn()
         {
             GameObject cameraGo = AssetManager.Load<GameObject>("Prefabs/Camera");
 

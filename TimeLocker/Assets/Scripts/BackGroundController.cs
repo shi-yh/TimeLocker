@@ -23,15 +23,12 @@ public class BackGroundController : MonoBehaviour
     {
         _time -= Time.deltaTime * _speed;
 
-        if (temp && _time < -2)
-        {
-            SpawnEnemy();
-            temp = false;
-        }
+      
 
-        if (_time <= -10)
+        if (_time <= -2)
         {
             _time = 0;
+            SpawnEnemy();
         }
 
         _block.SetVector("_BaseMap_ST", new Vector4(5, 5, 0, _time));

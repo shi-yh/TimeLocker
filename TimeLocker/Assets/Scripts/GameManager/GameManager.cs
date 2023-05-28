@@ -14,7 +14,7 @@ namespace GameManager
         GameState_End,
     }
 
-    public class GameManager : Entity
+    public class GameManager : EntitySpecial
     {
         private GameManagerMachine _machie;
 
